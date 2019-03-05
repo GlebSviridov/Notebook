@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyNoteebook.BLL.DTO.ContactDto>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Some Contact Page</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </th>
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(x => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.ShortDescription)
+        </td>
+    </tr>
+    }
+</table>
